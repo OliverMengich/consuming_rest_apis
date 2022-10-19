@@ -9,22 +9,12 @@ const a = async () => {
     let x = JSON.stringify(data)
     let y = '{"jokes" : ' + x + " }";
     y = JSON.parse(y);
-
 };
 const jokesFile = util.promisify(a);
 jokesFile((data) => {
-    console.log(data.jokes[0]);
+    console.log(data.jokes);
 })
-    .catch(err => {
-        console.log('Error occured ' + err)
-    })
-// const jokesFile = util.promisify(a);
-// jokesFile((data)=>{
-//     module.exports = data.jokes[0];
-// })
-// .catch(err=>{
-//     console.log('Error occured '+err)
-// })
-// console.log('End Of Start')
-
+.catch(err => {
+    console.log('Error occured ' + err)
+})
 //======================================================= the HTTPS modulle=======================

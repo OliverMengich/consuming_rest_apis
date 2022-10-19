@@ -18,12 +18,14 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1><%= joke.id %></h1>
-        <h1><%= joke.type %></h1>
-        <h1><%= joke.setup %></h1>
-        <h1><%= joke.punchline %></h1>
-        <button>Click to get a Joke</button>
-    </div>
+    <% jokes.forEach(joke => { %>
+        <div class="container">
+            <h1><%= joke.id %></h1>
+            <h1><%= joke.type %></h1>
+            <h1><%= joke.setup %></h1>
+            <h1><%= joke.punchline %></h1>
+        </div>
+    <% }) %>    
+    <button> Click to get a Joke</button>
 </body>
 </html>
